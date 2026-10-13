@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../../../../../../../../../static/css/style.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>Symbol - puncover</title>
+    
+</head>
+<body>
+    <div class="container" id="content">
+        <div class="page-header">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="../../../../../../../../../../../../index.html">
+                    Puncover
+                  </a>
+                </div>
+              </div>
+            </nav>
+          
+        </div>
+        <div id="inner_content">
+        
+    
+    <ol class="breadcrumb folders">
+        
+        <li><a href="../../../../../../../../../../../../home.html">home</a></li>
+        
+        <li><a href="../../../../../../../../../../../runner.html">runner</a></li>
+        
+        <li><a href="../../../../../../../../../../work.html">work</a></li>
+        
+        <li><a href="../../../../../../../../../openbsw.html">openbsw</a></li>
+        
+        <li><a href="../../../../../../../../openbsw.html">openbsw</a></li>
+        
+        <li><a href="../../../../../../../platforms.html">platforms</a></li>
+        
+        <li><a href="../../../../../../s32k1xx.html">s32k1xx</a></li>
+        
+        <li><a href="../../../../../bsp.html">bsp</a></li>
+        
+        <li><a href="../../../../bspTja1101.html">bspTja1101</a></li>
+        
+        <li><a href="../../../src.html">src</a></li>
+        
+        <li ><a href="../../mdio.html">mdio</a>
+            </li>
+
+        
+        <li class="active"><a href="../MdioTja1101.cpp.html">MdioTja1101.cpp</a>:61
+            </li>
+        
+    </ol>
+
+
+    <table class="table table-condensed">
+        <tbody>
+            <tr>
+                <th>Function</th>
+                <td colspan="5">
+                    <span class="icon-function">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</span>
+                </td>
+            </tr>
+
+            <tr>
+                <th rowspan="2"></th>
+                <th>Address</th>
+                <th>Remarks</th>
+                <th>Stack</th>
+                <th>Code</th>
+                <th>Static</th>
+            </tr>
+            <tr>
+                <td>0x0003c0d8</td>
+                <td>
+    
+    
+</td>
+                <td>40 (static)</td>
+                <td>548</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>Callers (2)</th>
+                <td colspan="5">
+                
+                    <a href="./735431b1f23e63069c3761b6410bdf89.html">enetphy::MdioTja1101::miimRead(unsigned char, unsigned char, unsigned short&amp;) (48)</a>
+                    
+                        ,
+                    
+                
+                    <a href="./504101271eda76229f4b5eb132fae425.html">enetphy::MdioTja1101::miimWrite(unsigned char, unsigned char, unsigned short) (48)</a>
+                    
+                
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Callees (5,
+                            <span title="sum of used bytes by all callees">
+                            Σ=592
+                            </span>
+                        )
+                    
+                </th>
+                <td colspan="5">
+                
+                    <a href="../../../../bspIo/src/io/Io.cpp/25bc42bb2f755e19972444e2a1b679be.html">bios::Io::getConfiguration(unsigned short, bios::Io::PinConfiguration&amp;) (144)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../bspIo/src/io/Io.cpp/4d2b35f004d57c9527b81a1790cf7eec.html">bios::Io::setConfiguration(unsigned short, bios::Io::PinConfiguration const&amp;) (228)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool) (56)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs (108)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/25ea937636825ffe7bc1b973cac53615.html">bios::Output::get(bios::Output::OutputId, bool&amp;) (56)</a>
+                    
+                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <pre><a href="../../phy/Tja1101Tester.cpp/23f1eca3a55db5d02b04e61c9d013fc1.html">enetphy::Tja1101Tester::executeCommand(util::command::CommandContext&amp;, unsigned char) (200)</a></pre>
+    
+
+    <pre>
+
+    enetphy::MdioTja1101::transfer(unsigned long*, bool) const():
+
+       3c0d8:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+
+       3c0dc:	b084      	sub	sp, #16
+
+       3c0de:	4604      	mov	r4, r0
+
+       3c0e0:	460e      	mov	r6, r1
+
+       3c0e2:	2024      	movs	r0, #36	@ 0x24
+
+       3c0e4:	a902      	add	r1, sp, #8
+
+       3c0e6:	4617      	mov	r7, r2
+
+       3c0e8:	f7ff fe56 	bl	3bd98 <<a href="../../../../bspIo/src/io/Io.cpp/25bc42bb2f755e19972444e2a1b679be.html">bios::Io::getConfiguration(unsigned short, bios::Io::PinConfiguration&)</a>>
+
+       3c0ec:	2302      	movs	r3, #2
+
+       3c0ee:	a902      	add	r1, sp, #8
+
+       3c0f0:	2024      	movs	r0, #36	@ 0x24
+
+       3c0f2:	f88d 300a 	strb.w	r3, [sp, #10]
+
+       3c0f6:	f7ff fdd1 	bl	3bc9c <<a href="../../../../bspIo/src/io/Io.cpp/4d2b35f004d57c9527b81a1790cf7eec.html">bios::Io::setConfiguration(unsigned short, bios::Io::PinConfiguration const&)</a>>
+
+       3c0fa:	6823      	ldr	r3, [r4, #0]
+
+       3c0fc:	2201      	movs	r2, #1
+
+       3c0fe:	7818      	ldrb	r0, [r3, #0]
+
+       3c100:	4611      	mov	r1, r2
+
+       3c102:	f000 f97d 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c106:	2520      	movs	r5, #32
+
+       3c108:	6823      	ldr	r3, [r4, #0]
+
+       3c10a:	2201      	movs	r2, #1
+
+       3c10c:	7858      	ldrb	r0, [r3, #1]
+
+       3c10e:	2100      	movs	r1, #0
+
+       3c110:	f000 f976 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c114:	2002      	movs	r0, #2
+
+       3c116:	f000 fde5 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c11a:	6823      	ldr	r3, [r4, #0]
+
+       3c11c:	2201      	movs	r2, #1
+
+       3c11e:	7858      	ldrb	r0, [r3, #1]
+
+       3c120:	4611      	mov	r1, r2
+
+       3c122:	f000 f96d 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c126:	2002      	movs	r0, #2
+
+       3c128:	f000 fddc 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c12c:	1e6b      	subs	r3, r5, #1
+
+       3c12e:	f013 05ff 	ands.w	r5, r3, #255	@ 0xff
+
+       3c132:	d1e9      	bne.n	3c108 <<a href="./ef01c613d567ec78544a6e1750175912.html">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</a>+0x30>
+
+       3c134:	f8b6 8002 	ldrh.w	r8, [r6, #2]
+
+       3c138:	250e      	movs	r5, #14
+
+       3c13a:	6823      	ldr	r3, [r4, #0]
+
+       3c13c:	2201      	movs	r2, #1
+
+       3c13e:	7858      	ldrb	r0, [r3, #1]
+
+       3c140:	2100      	movs	r1, #0
+
+       3c142:	f000 f95d 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c146:	6823      	ldr	r3, [r4, #0]
+
+       3c148:	ea4f 31d8 	mov.w	r1, r8, lsr #15
+
+       3c14c:	7818      	ldrb	r0, [r3, #0]
+
+       3c14e:	2201      	movs	r2, #1
+
+       3c150:	f000 f956 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c154:	2002      	movs	r0, #2
+
+       3c156:	f000 fdc5 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c15a:	6823      	ldr	r3, [r4, #0]
+
+       3c15c:	2201      	movs	r2, #1
+
+       3c15e:	7858      	ldrb	r0, [r3, #1]
+
+       3c160:	4611      	mov	r1, r2
+
+       3c162:	f000 f94d 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c166:	2002      	movs	r0, #2
+
+       3c168:	f000 fdbc 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c16c:	1e6b      	subs	r3, r5, #1
+
+       3c16e:	ea4f 0848 	mov.w	r8, r8, lsl #1
+
+       3c172:	f013 05ff 	ands.w	r5, r3, #255	@ 0xff
+
+       3c176:	fa1f f888 	uxth.w	r8, r8
+
+       3c17a:	d1de      	bne.n	3c13a <<a href="./ef01c613d567ec78544a6e1750175912.html">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</a>+0x62>
+
+       3c17c:	6823      	ldr	r3, [r4, #0]
+
+       3c17e:	2201      	movs	r2, #1
+
+       3c180:	7858      	ldrb	r0, [r3, #1]
+
+       3c182:	2f00      	cmp	r7, #0
+
+       3c184:	d06c      	beq.n	3c260 <<a href="./ef01c613d567ec78544a6e1750175912.html">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</a>+0x188>
+
+       3c186:	4629      	mov	r1, r5
+
+       3c188:	f000 f93a 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c18c:	2002      	movs	r0, #2
+
+       3c18e:	2701      	movs	r7, #1
+
+       3c190:	f000 fda8 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c194:	a902      	add	r1, sp, #8
+
+       3c196:	2024      	movs	r0, #36	@ 0x24
+
+       3c198:	f88d 700a 	strb.w	r7, [sp, #10]
+
+       3c19c:	f7ff fd7e 	bl	3bc9c <<a href="../../../../bspIo/src/io/Io.cpp/4d2b35f004d57c9527b81a1790cf7eec.html">bios::Io::setConfiguration(unsigned short, bios::Io::PinConfiguration const&)</a>>
+
+       3c1a0:	6823      	ldr	r3, [r4, #0]
+
+       3c1a2:	463a      	mov	r2, r7
+
+       3c1a4:	4639      	mov	r1, r7
+
+       3c1a6:	7858      	ldrb	r0, [r3, #1]
+
+       3c1a8:	f000 f92a 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c1ac:	2002      	movs	r0, #2
+
+       3c1ae:	f000 fd99 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c1b2:	6823      	ldr	r3, [r4, #0]
+
+       3c1b4:	463a      	mov	r2, r7
+
+       3c1b6:	7858      	ldrb	r0, [r3, #1]
+
+       3c1b8:	4629      	mov	r1, r5
+
+       3c1ba:	f000 f921 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c1be:	2002      	movs	r0, #2
+
+       3c1c0:	f000 fd90 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c1c4:	6823      	ldr	r3, [r4, #0]
+
+       3c1c6:	463a      	mov	r2, r7
+
+       3c1c8:	4639      	mov	r1, r7
+
+       3c1ca:	7858      	ldrb	r0, [r3, #1]
+
+       3c1cc:	f000 f918 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c1d0:	2002      	movs	r0, #2
+
+       3c1d2:	f000 fd87 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c1d6:	270f      	movs	r7, #15
+
+       3c1d8:	46a8      	mov	r8, r5
+
+       3c1da:	6823      	ldr	r3, [r4, #0]
+
+       3c1dc:	2201      	movs	r2, #1
+
+       3c1de:	7858      	ldrb	r0, [r3, #1]
+
+       3c1e0:	2100      	movs	r1, #0
+
+       3c1e2:	f000 f90d 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c1e6:	2002      	movs	r0, #2
+
+       3c1e8:	f000 fd7c 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+    _ZNK7enetphy11MdioTja110110getDataPinEv():
+
+       3c1ec:	6823      	ldr	r3, [r4, #0]
+
+       3c1ee:	f10d 0107 	add.w	r1, sp, #7
+
+       3c1f2:	7818      	ldrb	r0, [r3, #0]
+
+       3c1f4:	f88d 8007 	strb.w	r8, [sp, #7]
+
+       3c1f8:	f000 f8e6 	bl	3c3c8 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/25ea937636825ffe7bc1b973cac53615.html">bios::Output::get(bios::Output::OutputId, bool&)</a>>
+
+       3c1fc:	f89d 3007 	ldrb.w	r3, [sp, #7]
+
+    enetphy::MdioTja1101::transfer(unsigned long*, bool) const():
+
+       3c200:	6820      	ldr	r0, [r4, #0]
+
+       3c202:	2201      	movs	r2, #1
+
+       3c204:	40bb      	lsls	r3, r7
+
+       3c206:	432b      	orrs	r3, r5
+
+       3c208:	4611      	mov	r1, r2
+
+       3c20a:	7840      	ldrb	r0, [r0, #1]
+
+       3c20c:	b29d      	uxth	r5, r3
+
+       3c20e:	f000 f8f7 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c212:	2002      	movs	r0, #2
+
+       3c214:	f000 fd66 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c218:	3f01      	subs	r7, #1
+
+       3c21a:	d2de      	bcs.n	3c1da <<a href="./ef01c613d567ec78544a6e1750175912.html">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</a>+0x102>
+
+       3c21c:	2302      	movs	r3, #2
+
+       3c21e:	a902      	add	r1, sp, #8
+
+       3c220:	2024      	movs	r0, #36	@ 0x24
+
+       3c222:	f88d 300a 	strb.w	r3, [sp, #10]
+
+       3c226:	f7ff fd39 	bl	3bc9c <<a href="../../../../bspIo/src/io/Io.cpp/4d2b35f004d57c9527b81a1790cf7eec.html">bios::Io::setConfiguration(unsigned short, bios::Io::PinConfiguration const&)</a>>
+
+       3c22a:	6035      	str	r5, [r6, #0]
+
+       3c22c:	6823      	ldr	r3, [r4, #0]
+
+       3c22e:	2201      	movs	r2, #1
+
+       3c230:	7858      	ldrb	r0, [r3, #1]
+
+       3c232:	2100      	movs	r1, #0
+
+       3c234:	f000 f8e4 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c238:	6823      	ldr	r3, [r4, #0]
+
+       3c23a:	2201      	movs	r2, #1
+
+       3c23c:	4611      	mov	r1, r2
+
+       3c23e:	7818      	ldrb	r0, [r3, #0]
+
+       3c240:	f000 f8de 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c244:	2002      	movs	r0, #2
+
+       3c246:	f000 fd4d 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c24a:	2301      	movs	r3, #1
+
+       3c24c:	a902      	add	r1, sp, #8
+
+       3c24e:	2024      	movs	r0, #36	@ 0x24
+
+       3c250:	f88d 300a 	strb.w	r3, [sp, #10]
+
+       3c254:	f7ff fd22 	bl	3bc9c <<a href="../../../../bspIo/src/io/Io.cpp/4d2b35f004d57c9527b81a1790cf7eec.html">bios::Io::setConfiguration(unsigned short, bios::Io::PinConfiguration const&)</a>>
+
+       3c258:	2000      	movs	r0, #0
+
+       3c25a:	b004      	add	sp, #16
+
+       3c25c:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+
+       3c260:	4639      	mov	r1, r7
+
+       3c262:	f000 f8cd 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c266:	6823      	ldr	r3, [r4, #0]
+
+       3c268:	2201      	movs	r2, #1
+
+       3c26a:	4611      	mov	r1, r2
+
+       3c26c:	7818      	ldrb	r0, [r3, #0]
+
+       3c26e:	f000 f8c7 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c272:	2002      	movs	r0, #2
+
+       3c274:	f000 fd36 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c278:	6823      	ldr	r3, [r4, #0]
+
+       3c27a:	2201      	movs	r2, #1
+
+       3c27c:	4611      	mov	r1, r2
+
+       3c27e:	7858      	ldrb	r0, [r3, #1]
+
+       3c280:	f000 f8be 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c284:	2002      	movs	r0, #2
+
+       3c286:	f000 fd2d 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c28a:	6823      	ldr	r3, [r4, #0]
+
+       3c28c:	4639      	mov	r1, r7
+
+       3c28e:	7858      	ldrb	r0, [r3, #1]
+
+       3c290:	2201      	movs	r2, #1
+
+       3c292:	f000 f8b5 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c296:	6823      	ldr	r3, [r4, #0]
+
+       3c298:	4639      	mov	r1, r7
+
+       3c29a:	7818      	ldrb	r0, [r3, #0]
+
+       3c29c:	2201      	movs	r2, #1
+
+       3c29e:	f000 f8af 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c2a2:	2002      	movs	r0, #2
+
+       3c2a4:	f000 fd1e 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c2a8:	6823      	ldr	r3, [r4, #0]
+
+       3c2aa:	2201      	movs	r2, #1
+
+       3c2ac:	7858      	ldrb	r0, [r3, #1]
+
+       3c2ae:	4611      	mov	r1, r2
+
+       3c2b0:	f000 f8a6 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c2b4:	2002      	movs	r0, #2
+
+       3c2b6:	f000 fd15 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c2ba:	8835      	ldrh	r5, [r6, #0]
+
+       3c2bc:	2710      	movs	r7, #16
+
+       3c2be:	6823      	ldr	r3, [r4, #0]
+
+       3c2c0:	2201      	movs	r2, #1
+
+       3c2c2:	7858      	ldrb	r0, [r3, #1]
+
+       3c2c4:	2100      	movs	r1, #0
+
+       3c2c6:	f000 f89b 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c2ca:	6823      	ldr	r3, [r4, #0]
+
+       3c2cc:	0be9      	lsrs	r1, r5, #15
+
+       3c2ce:	7818      	ldrb	r0, [r3, #0]
+
+       3c2d0:	2201      	movs	r2, #1
+
+       3c2d2:	f000 f895 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c2d6:	2002      	movs	r0, #2
+
+       3c2d8:	f000 fd04 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c2dc:	6823      	ldr	r3, [r4, #0]
+
+       3c2de:	2201      	movs	r2, #1
+
+       3c2e0:	7858      	ldrb	r0, [r3, #1]
+
+       3c2e2:	4611      	mov	r1, r2
+
+       3c2e4:	f000 f88c 	bl	3c400 <<a href="../../../../../../../libs/bsp/bspOutputManager/src/outputManager/Output.cpp/2c08fa321893ba76c3bcda60607bc7c8.html">bios::Output::set(bios::Output::OutputId, unsigned char, bool)</a>>
+
+       3c2e8:	2002      	movs	r0, #2
+
+       3c2ea:	f000 fcfb 	bl	3cce4 <<a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html">sysDelayUs</a>>
+
+       3c2ee:	1e7b      	subs	r3, r7, #1
+
+       3c2f0:	006d      	lsls	r5, r5, #1
+
+       3c2f2:	f013 07ff 	ands.w	r7, r3, #255	@ 0xff
+
+       3c2f6:	b2ad      	uxth	r5, r5
+
+       3c2f8:	d1e1      	bne.n	3c2be <<a href="./ef01c613d567ec78544a6e1750175912.html">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</a>+0x1e6>
+
+       3c2fa:	e797      	b.n	3c22c <<a href="./ef01c613d567ec78544a6e1750175912.html">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</a>+0x154>
+
+    </pre>
+
+    
+    <pre><a href="./735431b1f23e63069c3761b6410bdf89.html">enetphy::MdioTja1101::miimRead(unsigned char, unsigned char, unsigned short&amp;) (48)</a></pre>
+    
+
+    
+        <h1>Stack Worst-Case Scenarios</h1>
+        
+        <table class="table table-bordered table-hover table-condensed">
+        <thead>
+            <tr>
+                <th rowspan="2">#</th>
+                <th colspan="2" style="text-align: center">Stack</th>
+                <th colspan="2" style="text-align: center">Code</th>
+                <th rowspan="2" width="100%">Name</th>
+            </tr>
+            <tr>
+                <th class="col_size">&sum; = 148</th>
+                <th class="col_size"></th>
+                <th class="col_size">&sum;= 108</th>
+                <th class="col_size"></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <th>1</th>
+                <td class="col_size">
+                    
+                    148
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                20 
+            
+                </td>
+                <td class="col_size">
+                    
+                </td>
+                <td class="col_size">108</td>
+                <td><a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/bspConfiguration/src/bsp/SystemTimer/SystemTimer.cpp/35425094d4e9dc32f9e47f58106b4135.html" class="icon-function">sysDelayUs</a></td>
+            </tr>
+        
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <th></th>
+                <th class="col_size">128
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tfoot>
+        
+    </table>
+        
+        
+        <table class="table table-bordered table-hover table-condensed">
+        <thead>
+            <tr>
+                <th rowspan="2">#</th>
+                <th colspan="2" style="text-align: center">Stack</th>
+                <th colspan="2" style="text-align: center">Code</th>
+                <th rowspan="2" width="100%">Name</th>
+            </tr>
+            <tr>
+                <th class="col_size">&sum; = 128</th>
+                <th class="col_size"></th>
+                <th class="col_size">&sum;= 984</th>
+                <th class="col_size"></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <th>1</th>
+                <td class="col_size">
+                    
+                    128
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                40 
+            
+                </td>
+                <td class="col_size">
+                    
+                    
+                    984
+                    
+                    
+                </td>
+                <td class="col_size">548</td>
+                <td><a href="./ef01c613d567ec78544a6e1750175912.html" class="icon-function">enetphy::MdioTja1101::transfer(unsigned long*, bool) const</a></td>
+            </tr>
+        
+            <tr>
+                <th>2</th>
+                <td class="col_size">
+                    
+                    88
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                24 
+            
+                </td>
+                <td class="col_size">
+                    
+                    
+                    436
+                    
+                    
+                </td>
+                <td class="col_size">48</td>
+                <td><a href="./735431b1f23e63069c3761b6410bdf89.html" class="icon-function">enetphy::MdioTja1101::miimRead(unsigned char, unsigned char, unsigned short&amp;)</a></td>
+            </tr>
+        
+            <tr>
+                <th>3</th>
+                <td class="col_size">
+                    
+                    64
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                24 
+            
+                </td>
+                <td class="col_size">
+                    
+                    
+                    388
+                    
+                    
+                </td>
+                <td class="col_size">156</td>
+                <td><a href="../../phy/Tja1101.cpp/7c1eb7a473dce6485ad67909700355d1.html" class="icon-function">enetphy::Tja1101::isLinkUp()</a></td>
+            </tr>
+        
+            <tr>
+                <th>4</th>
+                <td class="col_size">
+                    
+                    40
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                8 
+            
+                </td>
+                <td class="col_size">
+                    
+                    
+                    232
+                    
+                    
+                </td>
+                <td class="col_size">32</td>
+                <td><a href="../../phy/Tja1101.cpp/2ac1e3dfbe51be7094a3f0ff0a04757f.html" class="icon-function">enetphy::Tja1101::start()</a></td>
+            </tr>
+        
+            <tr>
+                <th>5</th>
+                <td class="col_size">
+                </td>
+                <td class="col_size">
+            
+                32 
+            
+                </td>
+                <td class="col_size">
+                    
+                </td>
+                <td class="col_size">200</td>
+                <td><a href="../../phy/Tja1101Tester.cpp/23f1eca3a55db5d02b04e61c9d013fc1.html" class="icon-function">enetphy::Tja1101Tester::executeCommand(util::command::CommandContext&amp;, unsigned char)</a></td>
+            </tr>
+        
+        </tbody>
+        
+    </table>
+        
+    
+
+
+        </div>
+    <div id="page-footer">
+        <hr>
+        
+            brought to you with 💖
+            by <a href="https://twitter.com/hbehrens">Heiko Behrens</a>
+            <span class="secondary">– MIT license, copyright © 2014-2026</span>
+        
+    </div>
+    </div>
+</body>
+</html>

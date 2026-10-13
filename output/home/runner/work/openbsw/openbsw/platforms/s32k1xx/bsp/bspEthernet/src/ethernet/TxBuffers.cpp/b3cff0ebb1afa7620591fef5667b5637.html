@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../../../../../../../../../../static/css/style.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>Symbol - puncover</title>
+    
+</head>
+<body>
+    <div class="container" id="content">
+        <div class="page-header">
+            <nav class="navbar navbar-default" role="navigation">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="../../../../../../../../../../../../index.html">
+                    Puncover
+                  </a>
+                </div>
+              </div>
+            </nav>
+          
+        </div>
+        <div id="inner_content">
+        
+    
+    <ol class="breadcrumb folders">
+        
+        <li><a href="../../../../../../../../../../../../home.html">home</a></li>
+        
+        <li><a href="../../../../../../../../../../../runner.html">runner</a></li>
+        
+        <li><a href="../../../../../../../../../../work.html">work</a></li>
+        
+        <li><a href="../../../../../../../../../openbsw.html">openbsw</a></li>
+        
+        <li><a href="../../../../../../../../openbsw.html">openbsw</a></li>
+        
+        <li><a href="../../../../../../../platforms.html">platforms</a></li>
+        
+        <li><a href="../../../../../../s32k1xx.html">s32k1xx</a></li>
+        
+        <li><a href="../../../../../bsp.html">bsp</a></li>
+        
+        <li><a href="../../../../bspEthernet.html">bspEthernet</a></li>
+        
+        <li><a href="../../../src.html">src</a></li>
+        
+        <li ><a href="../../ethernet.html">ethernet</a>
+            </li>
+
+        
+        <li class="active"><a href="../TxBuffers.cpp.html">TxBuffers.cpp</a>:142
+            </li>
+        
+    </ol>
+
+
+    <table class="table table-condensed">
+        <tbody>
+            <tr>
+                <th>Function</th>
+                <td colspan="5">
+                    <span class="icon-function">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</span>
+                </td>
+            </tr>
+
+            <tr>
+                <th rowspan="2"></th>
+                <th>Address</th>
+                <th>Remarks</th>
+                <th>Stack</th>
+                <th>Code</th>
+                <th>Static</th>
+            </tr>
+            <tr>
+                <td>0x0003d9b4</td>
+                <td>
+    <span class="label label-success">x-module</span>
+    
+</td>
+                <td>64 (static)</td>
+                <td>388</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <th>Callers (1)</th>
+                <td colspan="5">
+                
+                    <a href="../../../../../../../executables/referenceApp/platforms/s32k148evb/main/include/systems/S32K148EvbEthernetSystem.h/8d3bd0db1a714f2d409a408ed40328a1.html">systems::S32K148EvbEthernetSystem::writeFrame(netif*, pbuf*) (8)</a>
+                    
+                
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Callees (8,
+                            <span title="sum of used bytes by all callees">
+                            Σ=510
+                            </span>
+                        )
+                    
+                </th>
+                <td colspan="5">
+                
+                    <a href="../../../../../../../libs/3rdparty/lwip/src/core/pbuf.c/6311e851cc8270e931d9482912e750e2.html">pbuf_clen (20)</a>
+                    
+                        ,
+                    
+                
+                    <a href="./345eaa815ae0b5b7577e4f835e01d138.html">ethernet::TxBuffers::getNextDescriptorIndex(unsigned char, etl::span&lt;unsigned char, 4294967295u&gt;) (132)</a>
+                    
+                        ,
+                    
+                
+                    <a href="./d6bd0247a002abd943fb3768574dde61.html">ethernet::TxBuffers::writeBuffer(unsigned char, etl::span&lt;unsigned char const, 4294967295u&gt;, bool) (136)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../../../../libs/3rdparty/lwip/src/core/pbuf.c/b1e9f5f05fc261ade8a2ac2ca88ae3d4.html">pbuf_ref (28)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../../../../libs/3rdparty/lwip/src/core/pbuf.c/9b6fd2596874539050b4147be9634d35.html">pbuf_free (8)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../../../../../../../../../unknown/unknown/7d8c66e32294c0fbcad3762662cbd6d5.html">memmove (50)</a>
+                    
+                        ,
+                    
+                
+                    <a href="../../../../../../../libs/bsw/util/include/util/logger/Logger.h/16ed4f7f357fda1c5edc4479ef99d0a4.html">util::logger::Logger::log(unsigned char, util::logger::Level, char const*, ...) (56)</a>
+                    
+                        ,
+                    
+                
+                    <a href="./6995d51f5838ea7d441a1467cf9160ab.html">ethernet::commitFrame(unsigned char, unsigned char const*, etl::span&lt;ENET_ETXD, 4294967295u&gt;) (80)</a>
+                    
+                
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <pre><a href="./345eaa815ae0b5b7577e4f835e01d138.html">ethernet::TxBuffers::getNextDescriptorIndex(unsigned char, etl::span&lt;unsigned char, 4294967295u&gt;) (132)</a></pre>
+    
+
+    <pre>
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3d9b4:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
+
+       3d9b8:	4604      	mov	r4, r0
+
+       3d9ba:	b087      	sub	sp, #28
+
+       3d9bc:	4610      	mov	r0, r2
+
+       3d9be:	4617      	mov	r7, r2
+
+       3d9c0:	468a      	mov	sl, r1
+
+       3d9c2:	f7ec fb01 	bl	29fc8 <<a href="../../../../../../../libs/3rdparty/lwip/src/core/pbuf.c/6311e851cc8270e931d9482912e750e2.html">pbuf_clen</a>>
+
+       3d9c6:	2800      	cmp	r0, #0
+
+       3d9c8:	f000 8091 	beq.w	3daee <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x13a>
+
+    _ZNK3etl4spanI9ENET_ETXDLj4294967295EE4sizeEv():
+
+       3d9cc:	6923      	ldr	r3, [r4, #16]
+
+       3d9ce:	68e2      	ldr	r2, [r4, #12]
+
+       3d9d0:	1a9b      	subs	r3, r3, r2
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3d9d2:	ebb0 1f63 	cmp.w	r0, r3, asr #5
+
+       3d9d6:	4683      	mov	fp, r0
+
+       3d9d8:	d905      	bls.n	3d9e6 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x32>
+
+       3d9da:	f04f 0800 	mov.w	r8, #0
+
+       3d9de:	4640      	mov	r0, r8
+
+       3d9e0:	b007      	add	sp, #28
+
+       3d9e2:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+
+       3d9e6:	f3ef 8310 	mrs	r3, PRIMASK
+
+    getMachineStateRegisterValueAndSuspendAllInterrupts():
+
+       3d9ea:	b672      	cpsid	i
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3d9ec:	fa5f f980 	uxtb.w	r9, r0
+
+    getMachineStateRegisterValueAndSuspendAllInterrupts():
+
+       3d9f0:	9301      	str	r3, [sp, #4]
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3d9f2:	aa04      	add	r2, sp, #16
+
+    _ZN3etl4spanIhLj4294967295EEC4ERKS1_():
+
+       3d9f4:	69e3      	ldr	r3, [r4, #28]
+
+       3d9f6:	9304      	str	r3, [sp, #16]
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3d9f8:	4649      	mov	r1, r9
+
+       3d9fa:	4620      	mov	r0, r4
+
+       3d9fc:	f7ff ff98 	bl	3d930 <<a href="./345eaa815ae0b5b7577e4f835e01d138.html">ethernet::TxBuffers::getNextDescriptorIndex(unsigned char, etl::span<unsigned char, 4294967295u>)</a>>
+
+       3da00:	b378      	cbz	r0, 3da62 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xae>
+
+       3da02:	b377      	cbz	r7, 3da62 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xae>
+
+       3da04:	463d      	mov	r5, r7
+
+       3da06:	2600      	movs	r6, #0
+
+       3da08:	9700      	str	r7, [sp, #0]
+
+       3da0a:	686f      	ldr	r7, [r5, #4]
+
+       3da0c:	f8b5 800a 	ldrh.w	r8, [r5, #10]
+
+       3da10:	682d      	ldr	r5, [r5, #0]
+
+       3da12:	b337      	cbz	r7, 3da62 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xae>
+
+       3da14:	2e00      	cmp	r6, #0
+
+       3da16:	d04d      	beq.n	3dab4 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x100>
+
+       3da18:	69e0      	ldr	r0, [r4, #28]
+
+    _ZN3etl4spanIKhLj4294967295EEC4IPhEET_j():
+
+       3da1a:	eb07 0208 	add.w	r2, r7, r8
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3da1e:	fab5 f385 	clz	r3, r5
+
+       3da22:	5d81      	ldrb	r1, [r0, r6]
+
+    _ZN3etl4spanIKhLj4294967295EEC4IPhEET_j():
+
+       3da24:	9205      	str	r2, [sp, #20]
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3da26:	095b      	lsrs	r3, r3, #5
+
+       3da28:	aa04      	add	r2, sp, #16
+
+       3da2a:	4620      	mov	r0, r4
+
+    _ZN3etl4spanIKhLj4294967295EEC4IPhEET_j():
+
+       3da2c:	9704      	str	r7, [sp, #16]
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3da2e:	f7ff ff3b 	bl	3d8a8 <<a href="./d6bd0247a002abd943fb3768574dde61.html">ethernet::TxBuffers::writeBuffer(unsigned char, etl::span<unsigned char const, 4294967295u>, bool)</a>>
+
+       3da32:	3601      	adds	r6, #1
+
+       3da34:	bb10      	cbnz	r0, 3da7c <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xc8>
+
+    _ZNK3etl4spanI9ENET_ETXDLj4294967295EE4sizeEv():
+
+       3da36:	68e3      	ldr	r3, [r4, #12]
+
+       3da38:	6922      	ldr	r2, [r4, #16]
+
+       3da3a:	1ad2      	subs	r2, r2, r3
+
+    _ZN8ethernet9TxBuffers14freeDescriptorEh():
+
+       3da3c:	f894 3025 	ldrb.w	r3, [r4, #37]	@ 0x25
+
+    _ZNK3etl4spanI9ENET_ETXDLj4294967295EE4sizeEv():
+
+       3da40:	1151      	asrs	r1, r2, #5
+
+    _ZN8ethernet9TxBuffers14freeDescriptorEh():
+
+       3da42:	eb03 1362 	add.w	r3, r3, r2, asr #5
+
+       3da46:	f894 2024 	ldrb.w	r2, [r4, #36]	@ 0x24
+
+       3da4a:	eba3 0309 	sub.w	r3, r3, r9
+
+       3da4e:	eba2 0209 	sub.w	r2, r2, r9
+
+       3da52:	f884 2024 	strb.w	r2, [r4, #36]	@ 0x24
+
+       3da56:	fbb3 f2f1 	udiv	r2, r3, r1
+
+       3da5a:	fb01 3312 	mls	r3, r1, r2, r3
+
+       3da5e:	f884 3025 	strb.w	r3, [r4, #37]	@ 0x25
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3da62:	4b31      	ldr	r3, [pc, #196]	@ (3db28 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x174>)
+
+       3da64:	781a      	ldrb	r2, [r3, #0]
+
+       3da66:	2a00      	cmp	r2, #0
+
+       3da68:	d04f      	beq.n	3db0a <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x156>
+
+       3da6a:	f04f 0800 	mov.w	r8, #0
+
+       3da6e:	9b01      	ldr	r3, [sp, #4]
+
+    resumeAllInterrupts():
+
+       3da70:	f383 8810 	msr	PRIMASK, r3
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3da74:	4640      	mov	r0, r8
+
+       3da76:	b007      	add	sp, #28
+
+       3da78:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+
+       3da7c:	b2f6      	uxtb	r6, r6
+
+       3da7e:	2d00      	cmp	r5, #0
+
+       3da80:	d1c3      	bne.n	3da0a <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x56>
+
+       3da82:	455e      	cmp	r6, fp
+
+       3da84:	9f00      	ldr	r7, [sp, #0]
+
+       3da86:	4680      	mov	r8, r0
+
+       3da88:	d003      	beq.n	3da92 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xde>
+
+       3da8a:	4b28      	ldr	r3, [pc, #160]	@ (3db2c <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x178>)
+
+       3da8c:	a804      	add	r0, sp, #16
+
+       3da8e:	681b      	ldr	r3, [r3, #0]
+
+       3da90:	4798      	blx	r3
+
+       3da92:	4638      	mov	r0, r7
+
+       3da94:	f7ec faa2 	bl	29fdc <<a href="../../../../../../../libs/3rdparty/lwip/src/core/pbuf.c/b1e9f5f05fc261ade8a2ac2ca88ae3d4.html">pbuf_ref</a>>
+
+    _ZNK3etl4spanIhLj4294967295EEixEj():
+
+       3da98:	69e1      	ldr	r1, [r4, #28]
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3da9a:	6863      	ldr	r3, [r4, #4]
+
+       3da9c:	448b      	add	fp, r1
+
+       3da9e:	f81b 2c01 	ldrb.w	r2, [fp, #-1]
+
+       3daa2:	f843 7022 	str.w	r7, [r3, r2, lsl #2]
+
+    ethernet::commitFrame(unsigned char, unsigned char const*, etl::span<ENET_ETXD, 4294967295u>):
+
+       3daa6:	f1b9 0f00 	cmp.w	r9, #0
+
+       3daaa:	d137      	bne.n	3db1c <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x168>
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3daac:	4638      	mov	r0, r7
+
+       3daae:	f7ec fa87 	bl	29fc0 <<a href="../../../../../../../libs/3rdparty/lwip/src/core/pbuf.c/9b6fd2596874539050b4147be9634d35.html">pbuf_free</a>>
+
+       3dab2:	e7d6      	b.n	3da62 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xae>
+
+       3dab4:	7822      	ldrb	r2, [r4, #0]
+
+       3dab6:	b302      	cbz	r2, 3dafa <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x146>
+
+       3dab8:	7b3a      	ldrb	r2, [r7, #12]
+
+       3daba:	7b78      	ldrb	r0, [r7, #13]
+
+       3dabc:	ea42 2300 	orr.w	r3, r2, r0, lsl #8
+
+       3dac0:	9303      	str	r3, [sp, #12]
+
+       3dac2:	1f3b      	subs	r3, r7, #4
+
+       3dac4:	220c      	movs	r2, #12
+
+       3dac6:	4639      	mov	r1, r7
+
+       3dac8:	4618      	mov	r0, r3
+
+       3daca:	9302      	str	r3, [sp, #8]
+
+       3dacc:	f003 fdb8 	bl	41640 <<a href="../../../../../../../../../../../../unknown/unknown/7d8c66e32294c0fbcad3762662cbd6d5.html">memmove</a>>
+
+       3dad0:	f1ba 0f00 	cmp.w	sl, #0
+
+       3dad4:	d003      	beq.n	3dade <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x12a>
+
+       3dad6:	4a15      	ldr	r2, [pc, #84]	@ (3db2c <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x178>)
+
+       3dad8:	a804      	add	r0, sp, #16
+
+       3dada:	6812      	ldr	r2, [r2, #0]
+
+       3dadc:	4790      	blx	r2
+
+    _ZN3etl22private_unaligned_type14unaligned_copyILj2ELi4321ELb1EE19copy_value_to_storeItEEvRKT_Ph():
+
+       3dade:	9b03      	ldr	r3, [sp, #12]
+
+       3dae0:	ba5a      	rev16	r2, r3
+
+       3dae2:	727a      	strb	r2, [r7, #9]
+
+       3dae4:	f3c2 2207 	ubfx	r2, r2, #8, #8
+
+       3dae8:	723a      	strb	r2, [r7, #8]
+
+       3daea:	9f02      	ldr	r7, [sp, #8]
+
+       3daec:	e794      	b.n	3da18 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x64>
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3daee:	f04f 0801 	mov.w	r8, #1
+
+       3daf2:	4640      	mov	r0, r8
+
+       3daf4:	b007      	add	sp, #28
+
+       3daf6:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+
+       3dafa:	f1ba 0f00 	cmp.w	sl, #0
+
+       3dafe:	d08b      	beq.n	3da18 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x64>
+
+       3db00:	4a0a      	ldr	r2, [pc, #40]	@ (3db2c <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x178>)
+
+       3db02:	a804      	add	r0, sp, #16
+
+       3db04:	6812      	ldr	r2, [r2, #0]
+
+       3db06:	4790      	blx	r2
+
+       3db08:	e786      	b.n	3da18 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x64>
+
+       3db0a:	4809      	ldr	r0, [pc, #36]	@ (3db30 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x17c>)
+
+       3db0c:	4a09      	ldr	r2, [pc, #36]	@ (3db34 <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0x180>)
+
+       3db0e:	7800      	ldrb	r0, [r0, #0]
+
+       3db10:	2101      	movs	r1, #1
+
+       3db12:	7019      	strb	r1, [r3, #0]
+
+       3db14:	2103      	movs	r1, #3
+
+       3db16:	f7d5 fb09 	bl	1312c <<a href="../../../../../../../libs/bsw/util/include/util/logger/Logger.h/16ed4f7f357fda1c5edc4479ef99d0a4.html">util::logger::Logger::log(unsigned char, util::logger::Level, char const*, ...)</a>>
+
+       3db1a:	e7a6      	b.n	3da6a <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xb6>
+
+    ethernet::commitFrame(unsigned char, unsigned char const*, etl::span<ENET_ETXD, 4294967295u>):
+
+       3db1c:	68e2      	ldr	r2, [r4, #12]
+
+       3db1e:	4648      	mov	r0, r9
+
+       3db20:	f7ff fe62 	bl	3d7e8 <<a href="./6995d51f5838ea7d441a1467cf9160ab.html">ethernet::commitFrame(unsigned char, unsigned char const*, etl::span<ENET_ETXD, 4294967295u>)</a>.part.0.isra.0>
+
+    ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*):
+
+       3db24:	e7a3      	b.n	3da6e <<a href="./b3cff0ebb1afa7620591fef5667b5637.html">ethernet::TxBuffers::writeFrame(unsigned short, pbuf const*)</a>+0xba>
+
+       3db26:	bf00      	nop
+
+       3db28:	2001a54d 	.word	0x2001a54d
+
+       3db2c:	20000000 	.word	0x20000000
+
+       3db30:	2000000a 	.word	0x2000000a
+
+       3db34:	00049a74 	.word	0x00049a74
+
+    </pre>
+
+    
+    <pre><a href="./bb8fa584dc09347240119e4fbbafae55.html">ethernet::TxBuffers::interrupt() (224)</a></pre>
+    
+
+    
+        <h1>Stack Worst-Case Scenarios</h1>
+        
+        <table class="table table-bordered table-hover table-condensed">
+        <thead>
+            <tr>
+                <th rowspan="2">#</th>
+                <th colspan="2" style="text-align: center">Stack</th>
+                <th colspan="2" style="text-align: center">Code</th>
+                <th rowspan="2" width="100%">Name</th>
+            </tr>
+            <tr>
+                <th class="col_size">&sum; = 168</th>
+                <th class="col_size"></th>
+                <th class="col_size">&sum;= 260</th>
+                <th class="col_size"></th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <th>1</th>
+                <td class="col_size">
+                    
+                    168
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                48 
+            
+                </td>
+                <td class="col_size">
+                    
+                    
+                    260
+                    
+                    
+                </td>
+                <td class="col_size">68</td>
+                <td><a href="../../../../../../../libs/bsw/util/src/util/logger/Logger.cpp/d658d7c78dcca1ca01e61ef198b3eeaa.html" class="icon-function">util::logger::Logger::doLog(unsigned char, util::logger::Level, char const*, std::__va_list)</a></td>
+            </tr>
+        
+            <tr>
+                <th>2</th>
+                <td class="col_size">
+                    
+                    120
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                24 
+            
+                </td>
+                <td class="col_size">
+                    
+                    
+                    192
+                    
+                    
+                </td>
+                <td class="col_size">56</td>
+                <td><a href="../../../../../../../libs/bsw/util/include/util/logger/Logger.h/16ed4f7f357fda1c5edc4479ef99d0a4.html" class="icon-function">util::logger::Logger::log(unsigned char, util::logger::Level, char const*, ...)</a></td>
+            </tr>
+        
+            <tr>
+                <th>3</th>
+                <td class="col_size">
+                    
+                    96
+                    
+                    
+                </td>
+                <td class="col_size">
+            
+                32 
+            
+                </td>
+                <td class="col_size">
+                    
+                </td>
+                <td class="col_size">136</td>
+                <td><a href="./d6bd0247a002abd943fb3768574dde61.html" class="icon-function">ethernet::TxBuffers::writeBuffer(unsigned char, etl::span&lt;unsigned char const, 4294967295u&gt;, bool)</a></td>
+            </tr>
+        
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <th></th>
+                <th class="col_size">64
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tfoot>
+        
+    </table>
+        
+        
+            <p>No callers for this function.</p>
+        
+    
+
+
+        </div>
+    <div id="page-footer">
+        <hr>
+        
+            brought to you with 💖
+            by <a href="https://twitter.com/hbehrens">Heiko Behrens</a>
+            <span class="secondary">– MIT license, copyright © 2014-2026</span>
+        
+    </div>
+    </div>
+</body>
+</html>
